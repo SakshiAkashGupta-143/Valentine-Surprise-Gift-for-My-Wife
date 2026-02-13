@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You, Sakshi Gupta 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- ── SCREEN 1: Valentine Question ── -->
+  <div class="card" id="card">
+    <div class="image3-container">
+      <img src="image3.jpg" alt="Our photo" />
+    </div>
+    <div class="emoji bounce">❤️😘🐱</div>
+    <h1 class="script-font">Hey My Love 💖</h1>
+    <h2 class="script-font">Every smile of yours feels like home. Every moment with you feels like magic. And today... I just have one important question.</h2>
+    <h3 class="script-font">Will you be my Valentine? 💌</h3>
+    <p class="subtitle">If Yes... There's a surprise for you ❤️</p>
+    <div class="buttons">
+      <button id="yesBtn">Yes! 💖</button>
+      <button id="noBtn">No 😶</button>
+    </div>
+    <p id="message" class="hint">If "No" seems a bit shy 🙈😎</p>
+  </div>
+
+  <!-- ── SCREEN 2: Full Celebration Page ── -->
+  <div class="celebration hidden" id="celebration">
+
+    <!-- Navigation Tabs -->
+    <nav class="tab-nav" id="tabNav">
+      <button class="tab-btn active" data-tab="love-letter">💌 Love Letter</button>
+      <button class="tab-btn" data-tab="gallery">📸 Our Moments</button>
+      <button class="tab-btn" data-tab="gifts">🎁 Gifts</button>
+      <button class="tab-btn" data-tab="download">📥 Save Memories</button>
+    </nav>
+
+    <!-- TAB 1: Love Letter -->
+    <div class="tab-content active" id="tab-love-letter">
+      <div class="card celebration-card">
+        <div class="emoji bounce">💖✨💖</div>
+        <h1 class="script-font">CONGRATULATIONS</h1>
+        <h2>I'm so glad you are mine.</h2>
+        <p class="love-letter">You are officially, proudly, and forever</p>
+        <h3 class="script-font">💖 The Valentine of 💖<br/>Akash Gupta, Your Husband ❤️</h3>
+        <p class="love-letter">I choose you today. I'll choose you tomorrow. And I'll keep choosing you — Always. Every moment with you feels like a beautiful dream I never want to wake up from.</p>
+        <p class="love-letter">Wishing the sweetest, happiest day to my forever Valentine!</p>
+        <div class="signature">
+          <p>Happy Valentine's Day My Bachhwa 💘</p>
+          <p class="script-font sign-off">Forever yours, बदमाश पति 😎</p>
+        </div>
+        <div class="gif-row">
+          <div class="gif-frame">
+            <img src="image.gif" alt="Love animation" />
+          </div>
+          <div class="gif-frame">
+            <img src="image1.gif" alt="Love animation" />
+          </div>
+        </div>
+        <div class="audio-section">
+          <p class="audio-label">🎵 A song for you 🎵</p>
+          <audio controls loop id="bgMusic">
+            <source src="akash.ogg" type="audio/ogg" />
+            <source src="akash.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: Photo Gallery -->
+    <div class="tab-content" id="tab-gallery">
+      <div class="card gallery-card">
+        <h1 class="script-font">📸 Our Beautiful Moments</h1>
+        <p class="gallery-subtitle">Every picture tells our love story</p>
+        <div class="photo-gallery">
+          <div class="photo-item" data-index="0">
+            <img src="image.jpg" alt="Our memory" />
+            <div class="photo-caption">Together Forever 💕</div>
+          </div>
+          <div class="photo-item" data-index="1">
+            <img src="image1.jpg" alt="Our memory" />
+            <div class="photo-caption">My Favorite Person 💖</div>
+          </div>
+          <div class="photo-item" data-index="2">
+            <img src="image3.jpg" alt="Our memory" />
+            <div class="photo-caption">Pure Happiness 🥰</div>
+          </div>
+          <div class="photo-item" data-index="3">
+            <img src="image123.jpg" alt="Our memory" />
+            <div class="photo-caption">Us Against The World 💪❤️</div>
+          </div>
+        </div>
+      </div>
+      <!-- Lightbox Modal -->
+      <div class="lightbox hidden" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-arrow lightbox-prev" id="lightboxPrev">&#10094;</button>
+        <img src="" alt="Full view" id="lightboxImg" />
+        <button class="lightbox-arrow lightbox-next" id="lightboxNext">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- TAB 3: Gifts -->
+    <div class="tab-content" id="tab-gifts">
+      <div class="card gifts-card">
+        <h1 class="script-font">🎁 Valentine's Gifts</h1>
+        <p class="gallery-subtitle">Tokens of love, just for you</p>
+        <div class="gifts-grid">
+
+          <div class="gift-item">
+            <div class="gift-icon">💐</div>
+            <h3>Virtual Bouquet</h3>
+            <p>A bouquet of roses that never wilts — just like my love for you!</p>
+            <button class="gift-btn" id="bouquetBtn">Open Gift 🌹</button>
+            <div class="gift-reveal hidden" id="bouquetReveal">
+              <div class="bouquet-animation">🌹🌷🌸🌺🌻💐🌹🌷🌸</div>
+              <p class="gift-msg">A garden of flowers for the most beautiful flower in my life!</p>
+            </div>
+          </div>
+
+          <div class="gift-item">
+            <div class="gift-icon">💌</div>
+            <h3>Love Coupons</h3>
+            <p>Redeem these anytime you want!</p>
+            <div class="coupons-list">
+              <div class="coupon">🍕 1x Free Pizza Date Night</div>
+              <div class="coupon">🤗 Unlimited Hugs (24/7)</div>
+              <div class="coupon">🎬 1x Movie Night Your Choice</div>
+              <div class="coupon">💆 1x Full Day Pampering</div>
+              <div class="coupon">🍳 1x Breakfast in Bed</div>
+              <div class="coupon">🛍️ 1x Shopping Spree Together</div>
+            </div>
+          </div>
+
+          <div class="gift-item">
+            <div class="gift-icon">⭐</div>
+            <h3>Reasons I Love You</h3>
+            <p>Click to reveal a reason!</p>
+            <button class="gift-btn" id="reasonBtn">Show Me ❤️</button>
+            <p class="reason-text hidden" id="reasonText"></p>
+          </div>
+
+          <div class="gift-item">
+            <div class="gift-icon">💝</div>
+            <h3>Promise Card</h3>
+            <p>My promises to you, always and forever</p>
+            <div class="promise-card">
+              <p>I promise to always make you laugh 😄</p>
+              <p>I promise to hold your hand through every storm 🌧️</p>
+              <p>I promise to be your biggest cheerleader 📣</p>
+              <p>I promise to love you more each day 💕</p>
+              <p>I promise to always choose us 💑</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: Download Memories -->
+    <div class="tab-content" id="tab-download">
+      <div class="card download-card">
+        <div class="emoji bounce">📥💕📥</div>
+        <h1 class="script-font">Save Our Memories</h1>
+        <p class="love-letter">Download all our photos and love letter as a zip file to keep forever!</p>
+        <div class="download-options">
+          <div class="download-item">
+            <div class="download-icon">📸</div>
+            <h3>All Photos</h3>
+            <p>All our beautiful photos bundled together</p>
+          </div>
+          <div class="download-item">
+            <div class="download-icon">💌</div>
+            <h3>Love Letter</h3>
+            <p>The love letter as a keepsake text file</p>
+          </div>
+          <div class="download-item">
+            <div class="download-icon">🎵</div>
+            <h3>Our Song</h3>
+            <p>The special song included in the zip</p>
+          </div>
+        </div>
+        <button class="download-btn" id="downloadBtn">
+          <span id="downloadBtnText">💝 Download Valentine's Package 💝</span>
+          <span class="hidden" id="downloadProgress">Creating your package... 💕</span>
+        </button>
+        <div class="download-note">
+          <p>This zip file contains all our photos, GIFs, love letter, and song — save it to your phone or computer! 💾</p>
+        </div>
+
+        <!-- Developer / GitHub Download Section -->
+        <div class="dev-download-section">
+          <div class="dev-divider"></div>
+          <h2 class="script-font dev-heading">👨‍💻 Developer Package</h2>
+          <p class="dev-description">Want the full source code? Download everything including HTML, CSS, JavaScript, and all assets — ready to host or push to GitHub!</p>
+          <div class="download-options">
+            <div class="download-item dev-item">
+              <div class="download-icon">📄</div>
+              <h3>HTML / CSS / JS</h3>
+              <p>Complete source code for the website</p>
+            </div>
+            <div class="download-item dev-item">
+              <div class="download-icon">📁</div>
+              <h3>All Assets</h3>
+              <p>Photos, GIFs, music — everything included</p>
+            </div>
+            <div class="download-item dev-item">
+              <div class="download-icon">📝</div>
+              <h3>README</h3>
+              <p>Setup instructions &amp; project details</p>
+            </div>
+          </div>
+          <button class="download-btn dev-download-btn" id="devDownloadBtn">
+            🚀 Download Full Project (for GitHub) 🚀
+          </button>
+          <div class="download-note">
+            <p>The ZIP contains a <strong>source-code/</strong> folder with all project files — just extract and push to your GitHub repository! 🐙</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
