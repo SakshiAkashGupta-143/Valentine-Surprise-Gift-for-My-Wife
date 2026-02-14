@@ -94,7 +94,7 @@ const lightboxClose = document.getElementById("lightboxClose");
 const lightboxPrev = document.getElementById("lightboxPrev");
 const lightboxNext = document.getElementById("lightboxNext");
 
-const galleryImages = ["image.jpg", "image1.jpg", "image4.gif", "image123.jpg"];
+const galleryImages = ["image.jpg", "image1.jpg", "image4.gif", "image5.jpg"];
 let currentImageIndex = 0;
 
 photoItems.forEach((item) => {
@@ -396,4 +396,5 @@ downloadBtn.addEventListener("click", buildZip(false));
 if (devDownloadBtn) {
   devDownloadBtn.addEventListener("click", buildZip(true));
 }
+
 
